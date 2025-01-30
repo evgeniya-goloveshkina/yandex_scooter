@@ -1,7 +1,3 @@
-body_with_track = {
-    "track": 309509
-}
-
 # Данные для создания заказа
 order_body = {
     "firstName": "Naruto",

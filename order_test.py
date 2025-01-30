@@ -13,12 +13,10 @@ def get_new_order_track():
     # Запомнить трек заказа 
     return response.json()["track"]
 
-def positive_assert(order_body):
+def positive_assert():
     response = sender_requests.get_order_by_track(get_new_order_track())
 
-    print("response.status_code for get_order_by_track", response.status_code)
     assert response.status_code == 200
 
 def test_create_order_get_success_response():
-    body = data.order_body.copy()
-    positive_assert(body)
+    positive_assert()
